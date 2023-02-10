@@ -18,7 +18,13 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "baseUrl": ".",//以当前文件为路径
+    "paths": {
+      "@/*":[
+        "src/*"
+      ]
+    },//不配这个，写路径别名ts会识别不到
   },
   "include": [
     "src"
