@@ -4,7 +4,7 @@ import type { ReactNode } from 'react'
 interface IProps {
   children?: ReactNode
 }
-const Discover: FC<IProps> = () => {
-  return <div>Discover</div>
+const Download: FC<IProps> = () => {
+  return <div>Download</div>
 }
-export default memo(Discover)
+export default memo(Download)
