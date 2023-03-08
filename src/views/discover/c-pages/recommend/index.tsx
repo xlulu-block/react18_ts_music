@@ -4,7 +4,7 @@ import type { ReactNode } from 'react'
 interface IProps {
   children?: ReactNode
 }
-const Recommoned: FC<IProps> = () => {
-  return <div>Recommoned</div>
+const Recommend: FC<IProps> = () => {
+  return <div>Recommend</div>
 }
-export default memo(Recommoned)
+export default memo(Recommend)
