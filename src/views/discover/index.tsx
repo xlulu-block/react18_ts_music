@@ -4,6 +4,7 @@ import { Link, Outlet } from 'react-router-dom'
 interface IProps {
   children?: ReactNode
 }
+
 const Discover: FC<IProps> = () => {
   return (
     <div className="discover">
@@ -15,6 +16,7 @@ const Discover: FC<IProps> = () => {
         <Link to="/discover/djradio">歌手</Link>
         <Link to="/discover/album">新歌上架</Link>
       </div>
+
       {/* 只要路由用了懒加载引入，就需要suspense标签过渡 */}
       <Suspense fallback="">
         <div className="discover-main">
