@@ -1,15 +1,18 @@
 import React, { FC, memo } from 'react'
 import type { ReactNode } from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { HeaderLeft, HeaderRight, HeaderWrapper } from './style'
 import headerData from '@/assets/data/header_titles.json'
+import { Input } from 'antd'
+import { SearchOutlined } from '@ant-design/icons'
+
 interface IProps {
   children?: ReactNode
 }
 const AppHeader: FC<IProps> = () => {
   const handleTitle = (item: any) => {
     if (item.type === 'path') {
-      return <Link to={item.link}>{item.title}</Link>
+      return <NavLink to={item.link}>{item.title}</NavLink>
     } else {
       return (
         <a href={item.link} rel="noreferrer" target="_blank">
@@ -37,11 +40,11 @@ const AppHeader: FC<IProps> = () => {
         </HeaderLeft>
 
         <HeaderRight>
-          {/* <Input
+          <Input
             className="search"
             placeholder="音乐/视频/电台/用户"
             prefix={<SearchOutlined />}
-          /> */}
+          />
           <span className="center">创作者中心</span>
           <span className="login">登录</span>
         </HeaderRight>
