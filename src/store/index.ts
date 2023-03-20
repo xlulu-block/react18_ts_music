@@ -1,5 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit'
 import counterReducer from './modules/counter'
+import recommendReducer from '@/views/discover/c-pages/recommend/store'
 import {
   useSelector,
   TypedUseSelectorHook,
@@ -9,7 +10,8 @@ import {
 
 const store = configureStore({
   reducer: {
-    counter: counterReducer
+    counter: counterReducer,
+    recommend: recommendReducer
   }
 })
 // 以下为redux官方写法
